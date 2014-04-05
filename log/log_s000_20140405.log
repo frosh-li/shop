@@ -1,0 +1,189 @@
+[33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
+[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+Express server listening on port 8080
+[90mGET / [32m200 [90m9ms - 206b[0m
+[90mGET /stylesheets/style.css [32m200 [90m46ms - 110b[0m
+Error: ENOENT, open '/opt/shop/node_modules/express/node_modules/connect/node_modules/static-favicon/../public/favicon.ico'
+error: Forever detected script was killed by signal: SIGKILL
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+error: Forever detected script was killed by signal: SIGKILL
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+error: Forever detected script was killed by signal: SIGKILL
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+
+undefined:1
+b0VIM 7.3
+^
+SyntaxError: Unexpected token b
+    at Object.parse (native)
+    at /opt/shop/models/index.js:17:59
+    at fs.js:266:14
+    at Object.oncomplete (fs.js:107:15)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 0 time
+Express server listening on port 8080
+.package.json.swp
+package.json
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+
+undefined:1
+b0VIM 7.3
+^
+SyntaxError: Unexpected token b
+    at Object.parse (native)
+    at /opt/shop/models/index.js:18:59
+    at fs.js:266:14
+    at Object.oncomplete (fs.js:107:15)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+.package.json.swp
+package.json
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+
+undefined:1
+b0VIM 7.3
+^
+SyntaxError: Unexpected token b
+    at Object.parse (native)
+    at /opt/shop/models/index.js:18:59
+    at fs.js:266:14
+    at Object.oncomplete (fs.js:107:15)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 0 time
+Express server listening on port 8080
+package.json
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+
+/opt/shop/node_modules/mongoose/lib/schema.js:362
+    throw new TypeError('Undefined type at `' + path +
+          ^
+TypeError: Undefined type at `name`
+  Did you try nesting Schemas? You can only nest using refs or arrays.
+    at Function.Schema.interpretAsType (/opt/shop/node_modules/mongoose/lib/schema.js:362:11)
+    at Schema.path (/opt/shop/node_modules/mongoose/lib/schema.js:305:29)
+    at Schema.add (/opt/shop/node_modules/mongoose/lib/schema.js:217:12)
+    at new Schema (/opt/shop/node_modules/mongoose/lib/schema.js:73:10)
+    at /opt/shop/models/index.js:18:43
+    at fs.js:266:14
+    at Object.oncomplete (fs.js:107:15)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+package.json
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+
+/opt/shop/node_modules/mongoose/lib/schema.js:362
+    throw new TypeError('Undefined type at `' + path +
+          ^
+TypeError: Undefined type at `name`
+  Did you try nesting Schemas? You can only nest using refs or arrays.
+    at Function.Schema.interpretAsType (/opt/shop/node_modules/mongoose/lib/schema.js:362:11)
+    at Schema.path (/opt/shop/node_modules/mongoose/lib/schema.js:305:29)
+    at Schema.add (/opt/shop/node_modules/mongoose/lib/schema.js:217:12)
+    at new Schema (/opt/shop/node_modules/mongoose/lib/schema.js:73:10)
+    at /opt/shop/models/index.js:18:43
+    at fs.js:266:14
+    at Object.oncomplete (fs.js:107:15)
+error: Forever detected script exited with code: 8
+error: Forever restarting script for 0 time
+Express server listening on port 8080
+user.json
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+readfile error { file: 'user.json' }
+error: Forever detected script was killed by signal: SIGKILL
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+user.json
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+readfile error { file: 'user.json' } ENOENT, open 'user.json'
+error: Forever detected script was killed by signal: SIGKILL
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+user.json
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+readfile error { file: 'user.json' } ENOENT, open './modelsuser.json'
+error: Forever detected script was killed by signal: SIGKILL
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+user.json
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+data model user loaded
+error: Forever detected script was killed by signal: SIGKILL
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+user.json
+data model user loaded
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+mongo connection error [Error: failed to connect to [127.0.0.1:27017]]
+error: Forever detected script was killed by signal: SIGKILL
+error: Forever restarting script for 1 time
+Express server listening on port 8080
+user.json
+data model user loaded

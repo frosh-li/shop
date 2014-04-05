@@ -1,0 +1,4 @@
+1.cronolog 1.6
+参考
+IndexPath=http://112.124.0.158/servers.cfg?id=NJ_S000 nohup forever index.js 2>&1 | /usr/local/sbin/cronolog "/mnt/log.server.game/log_s000_%Y%m%d.log" 2>&1 && echo $$ > NJ_S000.pid &
+

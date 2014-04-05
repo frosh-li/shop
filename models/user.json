@@ -1,0 +1,26 @@
+{
+	"_id":{
+	"type":"String"
+	},
+	"gameTotalGolds":{
+	"type":"Number"
+	},
+	"sid":{
+	"type":"String"
+	},
+	"gameid":{
+	"type":"Number"
+	},
+	"logTime":{
+	"type":"Date"
+	},
+	"realDeviceCode":{
+	"type":"String"
+	},
+	"date":{
+	"type":"Date",
+	"index":{
+		"sparse":true
+	}
+	}
+}
