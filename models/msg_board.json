@@ -20,5 +20,8 @@
     "status":{
         "type":"Number",
         "default":0
+    },
+    "ip":{
+        "type":"String"
     }
 }

@@ -23,6 +23,9 @@
 	"lastLogin":{
 		"type":"Date"
 	},
+	"ip":{
+        "type":"String"
+    }
 	"date":{
 		"type":"Date",
 		"index":{
