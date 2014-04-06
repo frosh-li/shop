@@ -1,0 +1,33 @@
+{
+    "_id":{
+        "type":"String"
+    },
+    "uid":{
+        "type":"String",
+        "index":{
+            "sparse":true
+        }
+    },
+    "pid":{
+        "type":"String",
+        "index":{
+            "sparse":true
+        }    
+    },
+    "totalPrice":{
+        "type":"Number"
+    },
+    "payStatus":{
+        "type":"Number",
+        "default":0
+    },
+    "productName":{
+        "type":"String"
+    },
+    "created":{
+        "type":"Date"
+    },
+    "payDate":{
+        "type":"Date"
+    }
+}

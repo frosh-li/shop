@@ -1,0 +1,28 @@
+{
+    "_id":{
+        "type":"String"
+    },
+    "link":{
+        "type":"String"
+    },
+    "upid":{
+        "type":"String",
+        "index":{
+            "sparse":true
+        }
+    },
+    "categoryName":{
+        "type":"String",
+        "index":{
+            "sparse":true
+        }
+    },
+    "order":{
+        "type":"Number",
+        "default":0
+    },
+    "type":{
+        "type":"String",
+        "default":"product"
+    }
+}

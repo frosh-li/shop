@@ -1,26 +1,32 @@
 {
 	"_id":{
-	"type":"String"
+		"type":"String"
 	},
-	"gameTotalGolds":{
-	"type":"Number"
+	"username":{
+		"type":"String"
 	},
-	"sid":{
-	"type":"String"
+	"password":{
+		"type":"String"
 	},
-	"gameid":{
-	"type":"Number"
+	"email":{
+		"type":"String"
 	},
-	"logTime":{
-	"type":"Date"
+	"address":{
+		"type":"String"
 	},
-	"realDeviceCode":{
-	"type":"String"
+	"group":{
+		"type":"Number"
+	},
+	"created":{
+		"type":"Date"
+	},
+	"lastLogin":{
+		"type":"Date"
 	},
 	"date":{
-	"type":"Date",
-	"index":{
-		"sparse":true
-	}
+		"type":"Date",
+		"index":{
+			"sparse":true
+		}
 	}
 }

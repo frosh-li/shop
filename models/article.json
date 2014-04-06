@@ -1,0 +1,32 @@
+{
+    "_id":{
+        "type":"String"
+    },
+    "link":{
+        "type":"String"
+    },
+    "subject":{
+        "type":"String",
+        "index":{
+            "sparse":true
+        }
+    },
+    "sub_subject":{
+        "type":"String"
+    },
+    "content":{
+        "type":"String"
+    },
+    "categoryId":{
+        "type":"String",
+        "index":{
+            "sparse":true
+        }
+    },
+    "categoryName":{
+        "type":"String"
+    },
+    "categoryType":{
+        "type":"String"
+    }
+}
