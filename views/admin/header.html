@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <title>后台管理</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" />
+  <link rel="stylesheet" href="/css/select2.css" />
+  <link rel="stylesheet" href="/css/datepicker.css" />
+  <link rel="stylesheet" href="/css/matrix-style.css" />
+  <link rel="stylesheet" href="/css/matrix-media.css" />
+  <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/jquery.gritter.css" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <!--Header-part-->
+  <div id="header">
+    <h1><a href="dashboard.html">Matrix Admin</a></h1>
+  </div>
+  <!--close-Header-part--> 
+
+
+  <!--top-Header-menu-->
+  <div id="user-nav" class="navbar navbar-inverse">
+    <ul class="nav">
+      <li class=""><a title="" href="/admin/change_password"><i class="icon icon-cog"></i> <span class="text">修改密码</span></a></li>
+      <li class=""><a title="" href="/admin/logout"><i class="icon icon-share-alt"></i> <span class="text">退出登录</span></a></li>
+    </ul>
+  </div>
+  <!--close-top-Header-menu-->
+  
+  <!--sidebar-menu-->
+  <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+    <ul>
+      <li><a href="/admin/home"><i class="icon icon-home"></i> <span>主页</span></a> </li>
+      <li> <a href="/admin/productManage/1/20"><i class="icon icon-signal"></i> <span>商品管理</span></a> </li>
+      <li> <a href="/admin/userManage"><i class="icon icon-inbox"></i> <span>用户管理</span></a> </li>
+      <li><a href="/admin/msg_board"><i class="icon icon-th"></i> <span>留言板管理</span></a></li>
+      <li><a href="/admin/orderManage"><i class="icon icon-fullscreen"></i> <span>订单管理</span></a></li>
+    </ul>
+  </div>
+<!--sidebar-menu-->
