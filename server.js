@@ -13,6 +13,7 @@ var express_mongoose = require('express-mongoose');
 var auth = require("./lib/auth.js").auth;
 var app = express();
 var mongo_url = process.env.DEV == 1 ? "mongodb://127.0.0.1:27017/shop":"mongodb://mongo.duapp.com:8908/myymPmSvdNhMQOdOOLTn/";
+var mongo_url = "mongodb://127.0.0.1:27017/shop";
 mongoose.connect(mongo_url,{server:{poolSize:20}});
 mongoose.connection.on('error',function(err){
 	console.log('mongo connection error',err);
