@@ -1,0 +1,78 @@
+<% include ../header.html %>
+
+<!--main-container-part-->
+<div id="content">
+  <!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> 
+        <a href="/admin/home" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>主页</a>
+        <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>添加产品</a>
+    </div>
+  </div>
+  <!--End-breadcrumbs-->
+  <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+            <div class="widget-box widget-calendar">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-calendar"></i></span>
+                    <h5>新增产品</h5>
+                </div>
+                <div class="widget-content">
+                  <form action="/admin/productManage/create" method="post" class="form-horizontal">
+                    <div class="control-group">
+                      <label class="control-label">产品名称:</label>
+                      <div class="controls">
+                        <input class="span11" placeholder="First name" type="text">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">产品价格:</label>
+                      <div class="controls">
+                        <input class="span11" placeholder="Last name" type="text">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">折扣价格:</label>
+                      <div class="controls">
+                        <input class="span11" placeholder="Enter Password" type="password">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">Company info :</label>
+                      <div class="controls">
+                        <input class="span11" placeholder="Company name" type="text">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">Description field:</label>
+                      <div class="controls">
+                        <input class="span11" type="text">
+                        <span class="help-block">Description field</span> </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">图片上传:</label>
+                      <div class="controls">
+                        <input class="span11" type="file" multiple=true />
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label">详细描述:</label>
+                      <div class="controls">
+                        <textarea class="textarea_editor span12" rows="10" placeholder="Enter text ..."></textarea>
+                      </div>
+                    </div>
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-success">Save</button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+    $('.textarea_editor').wysihtml5();
+</script>
+<% include ../footer.html %>

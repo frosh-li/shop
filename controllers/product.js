@@ -31,6 +31,12 @@ function list(req, res){
     })
 }
 
+/**
+*/
+function createPage(req, res){
+    res.render('admin/product/createPage');
+}
+
 function update(){
 
 }
@@ -40,3 +46,5 @@ function remove(){
 }
 
 exports.list = list;
+exports.new = createPage;
+exports.create = create;

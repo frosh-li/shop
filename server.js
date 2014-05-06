@@ -49,6 +49,8 @@ app.get('/admin/logout',login.logout);
 app.post('/admin/login',login.doLogin);
 app.get('/admin/home',auth,login.adminIndex);
 app.get('/admin/productManage/:cpage/:perpage',auth,product.list);
+app.get('/admin/productManage/new',auth,product.new);
+app.post('/admin/productManage/create',auth,product.create);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
