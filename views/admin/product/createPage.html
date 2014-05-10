@@ -53,7 +53,14 @@
                     <div class="control-group">
                       <label class="control-label">图片上传:</label>
                       <div class="controls">
-                        <input class="span11" type="file" multiple=true />
+                        <input class="span4" type="file" multiple=true id="uploadFile" />
+                        <span class="btn pull-right" id="comfirmUpload" />开始上传</span>
+                        <br />
+                        
+
+                        <ul class="thumbs-list">
+                        </ul>
+                      </div>
                     </div>
                     <div class="control-group">
                       <label class="control-label">详细描述:</label>
@@ -73,6 +80,54 @@
     </div>
 </div>
 <script>
+function UploadFile(files,callback) {
+  var fd = new FormData();
+  for (var i=0; i<files.length; i++) {
+    fd.append('files', files[i]);
+  }
+  var xhr = new XMLHttpRequest();
+  if (xhr.upload){
+    // start upload
+    xhr.open("POST", "/upload", true);
+    //xhr.setRequestHeader("X_FILENAME", file.name);
+    xhr.onreadystatechange=function()
+    {
+    if (xhr.readyState==4 && xhr.status==200)
+      {
+        callback(JSON.parse(xhr.responseText));
+      }
+    }
+    xhr.send(fd);
+  }
+}
     $('.textarea_editor').wysihtml5();
+    console.log(editor);
+    $("#uploadFile").on("change",function(e){
+      console.log(this.files,this);
+    });
+    $("#comfirmUpload").click(function(e){
+      e.preventDefault();
+      var files = document.getElementById("uploadFile").files;
+      
+      if(files.length == 0){
+        alert('请先选择需要上传的文件');
+        return;
+      }
+      UploadFile(files,function(res){
+        console.log(res);
+        var htmls = [];
+        res.files.forEach(function(file){
+          htmls.push("<li><img src='"+file+"' width='80px' /></li>")
+        });
+        console.log(htmls);
+        $(".thumbs-list").html(htmls.join(""));
+      });
+      console.log('files:',files);
+    });
+    $(".thumbs-list").delegate("img","click",function(){
+      var imgPath = $(this).attr('src');
+      editor.currentView.element.focus();
+      editor.composer.commands.exec("insertImage", imgPath);
+    });
 </script>
 <% include ../footer.html %>
