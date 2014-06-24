@@ -14,7 +14,7 @@
 	"address":{
 		"type":"String"
 	},
-	"group":{
+	"role":{
 		"type":"Number"
 	},
 	"created":{

@@ -7,6 +7,7 @@ var express = require('express');
 var fs = require('fs');
 var routes = require('./routes');
 var user = require('./routes/user');
+var util = require('util');
 var http = require('http');
 var path = require('path');
 var mongoose = require('mongoose');
@@ -25,7 +26,7 @@ var Model = require("./models");
 var login = require('./controllers/login');
 var product = require('./controllers/product');
 // all environments
-app.set('port', process.env.PORT || 18080);
+app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -57,9 +58,13 @@ app.post('/upload',function(req,res){
     console.log(req.files);
     var allfiles = req.files.files;
     var ret = {files:[]};
-    allfiles.forEach(function(file){
-        ret.files.push(file.path.replace("public",""));
-    });
+    if(util.isArray(allfiles)){
+        allfiles.forEach(function(file){
+            ret.files.push(file.path.replace("public",""));
+        });
+    }else{
+        ret.files.push(allfiles.path.replace("public",""));
+    }
     console.log(ret);
     res.json(ret);
 });
