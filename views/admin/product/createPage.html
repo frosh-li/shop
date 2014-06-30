@@ -23,19 +23,19 @@
                     <div class="control-group">
                       <label class="control-label">产品名称:</label>
                       <div class="controls">
-                        <input class="span11" placeholder="First name" type="text">
+                        <input class="span11" name="productName" id="productName" placeholder="First name" type="text">
                       </div>
                     </div>
                     <div class="control-group">
                       <label class="control-label">产品价格:</label>
                       <div class="controls">
-                        <input class="span11" placeholder="Last name" type="text">
+                        <input class="span11" name="price" id="price" placeholder="Last name" type="text">
                       </div>
                     </div>
                     <div class="control-group">
                       <label class="control-label">折扣价格:</label>
                       <div class="controls">
-                        <input class="span11" placeholder="Enter Password" type="password">
+                        <input class="span11" name="savingPrice" id="savingPrice" placeholder="Enter Password" type="password">
                       </div>
                     </div>
                     <div class="control-group">
@@ -101,7 +101,7 @@ function UploadFile(files,callback) {
   }
 }
     $('.textarea_editor').wysihtml5();
-    console.log(editor);
+    console.log(editor);  
     $("#uploadFile").on("change",function(e){
       console.log(this.files,this);
     });
