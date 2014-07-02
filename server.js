@@ -25,6 +25,7 @@ var Model = require("./models");
 //all routers
 var login = require('./controllers/login');
 var product = require('./controllers/product');
+var category = require('./controllers/category');
 // all environments
 app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
@@ -51,9 +52,15 @@ app.get('/admin/login',login.index);
 app.get('/admin/logout',login.logout);
 app.post('/admin/login',login.doLogin);
 app.get('/admin/home',auth,login.adminIndex);
-app.get('/admin/productManage/:cpage/:perpage',auth,product.list);
+app.get('/admin/productManage/:cpage/:perpage',product.list);
+app.get('/admin/productManage/listjson/:cpage/:perpage/:catid',product.listjson);
 app.get('/admin/productManage/new',auth,product.new);
-app.post('/admin/productManage/create',auth,product.create);
+app.post('/admin/productManage/create',product.create);
+app.get('/admin/category/list',category.list);
+app.get('/admin/category/list/:catid',category.list);
+app.post('/admin/category/del',category.del);
+app.post('/admin/category/add',category.add);
+
 app.post('/upload',function(req,res){
     console.log(req.files);
     var allfiles = req.files.files;

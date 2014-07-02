@@ -35,8 +35,7 @@
         "type":"Date"
     },
     "property":{
-        "type":"Object",
-        "default":{}
+        "type":"Mixed"
     },
     "categoryId":{
         "type":"String",
@@ -53,8 +52,11 @@
     "desciption":{
         "type":"String"
     },
+    "mainThumb":{
+        "type":"String"
+    },
     "photos":{
-        "type":"Object",
+        "type":"Mixed",
         "default":[]
     }
 }

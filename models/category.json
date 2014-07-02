@@ -24,5 +24,8 @@
     "type":{
         "type":"String",
         "default":"product"
+    },
+    "property":{
+        "type":"Mixed"
     }
 }
