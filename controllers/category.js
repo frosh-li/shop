@@ -77,6 +77,15 @@ function listCategory(req, res){
 }
 
 exports.list = listCategory;
+exports.listall = function(req, res){
+    db.category.find({},null,{sort:{upid:-1, _id: -1}},function(err,cats){
+        if(err){
+            console.log(err);
+            res.json({"status":false});
+        }
+        res.json({"status":true,"data":cats});
+    });
+}
 exports.del = function(req,res){
     var catid = req.body.catid;
     console.log(catid);
@@ -87,7 +96,7 @@ exports.del = function(req,res){
     }else{
         res.json({"status":false});
     }
-}
+};
 
 exports.add = function(req, res){
     var name = req.body.name,
@@ -110,4 +119,7 @@ exports.add = function(req, res){
     },function(data){
         res.json(data);
     });
-}
+};
+exports.listpage = function(req, res){
+    res.render('admin/category/list');
+};
