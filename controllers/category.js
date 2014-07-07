@@ -104,12 +104,14 @@ exports.add = function(req, res){
         order = req.body.order,
         type = req.body.type,
         property = {};
+    /*
     for(var key in req.body){
         if(key.indexOf("property.") > -1){
             console.log(req.body[key]);
             property[key.split("property.")[1]] = req.body[key];
         }
     }
+    */
     console.log(property);
     addCategory(name, {
         upid: upid,

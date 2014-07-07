@@ -11,3 +11,11 @@ phonecatServices.factory('Category', ['$resource',
       save: {method:'POST', isArray:false}
     });
   }]);
+
+phonecatServices.factory('CategoryEdit', ['$resource',
+  function($resource){
+    return $resource('/admin/category/add', {}, {
+      //query: {method:'GET', params:{catid:'0'}, isArray:false},
+      save: {method:'POST', isArray:false}
+    });
+  }]);

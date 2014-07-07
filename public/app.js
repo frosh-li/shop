@@ -16,7 +16,10 @@ shopApp.config(['$routeProvider',
         templateUrl: '/views/admin/category/list.html',
         controller: 'CategoryCtroller'
       }).
-      
+      when('/category/new', {
+		templateUrl: '/views/admin/category/create.html',
+		controller:"CategoryEdit"
+	  }).      
       otherwise({
         redirectTo: '/category'
       });

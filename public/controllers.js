@@ -10,18 +10,26 @@ phonecatControllers.controller('CategoryCtroller', ['$scope', 'Category',
     $scope.orderProp = 'upid';
 
     $scope.SaveOne = function(category){
-      category.save();
+      category.$save();
       //alert(category);
     }
   }]);
 
-phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
-  function($scope, $routeParams, Phone) {
-    $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
-      $scope.mainImageUrl = phone.images[0];
-    });
-
-    $scope.setImage = function(imageUrl) {
-      $scope.mainImageUrl = imageUrl;
+phonecatControllers.controller('CategoryEdit', ['$http','$scope','Category',
+  function($http, $scope, Category) {
+    $scope.category = {
+      type:"product",
+      order:0,
+      property:JSON.stringify({})
+    };
+    $scope.categories = Category.query();
+    console.log($scope.categories);
+    $scope.create = function(category){
+        console.log(category);
+        $http.post("/admin/category/add",category).success(function(data, status, headers, config){
+            alert("success");
+        }).error(function(data, status, headers, config){
+            alert("error");
+        })
     }
   }]);
