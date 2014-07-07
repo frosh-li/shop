@@ -1,0 +1,51 @@
+  <!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> 
+        <a href="/admin/home" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>主页</a>
+        <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>分类管理</a>
+    </div>
+  </div>
+  <!--End-breadcrumbs-->
+  <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+            <div class="widget-box widget-calendar">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-calendar"></i></span>
+                    <h5>分类列表</h5>
+                    <div class="buttons">
+                        <a id="add-event" href="/admin/productManage/new" class="btn btn-info btn-mini">
+                            <i class="icon-plus"></i>新增分类
+                        </a>
+                    </div>  
+                </div>
+                <div class="widget-content nopadding">
+                  <table class="table table-bordered" id="listtable">
+                    <thead>
+                      <tr>
+                        <th>分类ID</th>
+                        <th>上级分类ID</th>
+                        <th>分类名</th>
+                        <th>类型</th>
+                        <th>顺序</th>
+                        <th>属性</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="category in categories.data">
+                        <td>{{category._id}}</td>
+                        <td>{{category.upid}}</td>
+                        <td><input type="text" value="{{category.categoryName}}" ng-model="category.categoryName" /></td>
+                        <td>{{category.type}}</td>
+                        <td>{{category.order}}</td>
+                        <td>{{category.property}}</td>
+                        <td><span class="btn" ng-click="SaveOne(category._id)">保存</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
