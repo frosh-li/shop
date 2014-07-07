@@ -1,0 +1,84 @@
+<% include ../header.html %>
+
+<!--main-container-part-->
+<div id="content">
+  <!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> 
+        <a href="/admin/home" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>主页</a>
+        <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>分类管理</a>
+    </div>
+  </div>
+  <!--End-breadcrumbs-->
+  <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+            <div class="widget-box widget-calendar">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-calendar"></i></span>
+                    <h5>分类列表</h5>
+                    <div class="buttons">
+                        <a id="add-event" href="/admin/productManage/new" class="btn btn-info btn-mini">
+                            <i class="icon-plus"></i>新增分类
+                        </a>
+                    </div>  
+                </div>
+                <div class="widget-content nopadding">
+                  <table class="table table-bordered" id="listtable">
+                    <thead>
+                      <tr>
+                        <th>分类ID</th>
+                        <th>上级分类ID</th>
+                        <th>分类名</th>
+                        <th>类型</th>
+                        <th>顺序</th>
+                        <th>属性</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+$.ajax({
+  url:"/admin/category/listall",
+  success:function(data){
+    if(data.status){
+      var html = [];
+      
+      for(var i = 0 ; i < data.data.length ; i++){
+        html.push('<tr>');
+        html.push('<td>');
+        html.push(data.data[i]._id);
+        html.push('</td>');
+        html.push('<td>');
+        html.push(data.data[i].upid);
+        html.push('</td>');
+        html.push('<td>');
+        html.push(data.data[i].categoryName);
+        html.push('</td>');
+        html.push('<td>');
+        html.push(data.data[i].type);
+        html.push('</td>');
+        html.push('<td>');
+        html.push(data.data[i].order);
+        html.push('</td>');
+        html.push('<td>');
+        html.push(JSON.stringify(data.data[i].property||{}));
+        html.push('</td>');
+        html.push('</tr>');
+      }
+      
+      console.log(data.data,html);
+      $("#listtable tbody").html(html.join(""));
+    }else{
+      alert("数据请求错误");
+    }
+  }
+});
+</script>
+<% include ../footer.html %>
