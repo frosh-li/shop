@@ -29,25 +29,41 @@ function addCategory(name,options,callback){
     });
 }
 
-function updateCategory(){
-    var upid = options.upid || 0;
-    console.log(name,options);
-    var obj = {
-        _id: uuid.v1(),
-        "link":"",
-        "upid":options.upid || 0,
-        "categoryName":name,
-        "order":options.order || 0,
-        "type":options.type || "product",
-        "property":options.property || {}
-    };
-    db.category.update({_id: _id}, function(err,cate){
+exports.get = function(req, res){
+    var catid = req.params.catid;
+    db.category.findById(catid,function(err,cate){
         if(err){
             console.log(err);
-            return callback({"status":false});
+            res.json({"status":false});
+        }
+        res.json(cate);
+    });
+}
+
+exports.update = function(req, res){
+    console.log('aaa');
+    var catid = req.params.catid;
+    //var upid = options.upid || 0;
+    console.log(req.body);
+    db.category.findById(catid, function(err,cate){
+        if(err){
+            console.log(err);
+            res.json({"status":false});
         }
         console.log(cate);
-        return callback({"status":true,"catid":cate._id});
+        for(var key in req.body){
+            if(key != "_id"){
+                cate[key] = req.body[key];
+            }
+        }
+        cate.save(function(err){
+            if(err){
+                console.log(err);
+                res.json({"status":false});
+            }
+            res.json(cate);
+        })
+        
     });
 }
 
@@ -72,7 +88,7 @@ function listCategory(req, res){
             console.log(err);
             res.json({"status":false});
         }
-        res.json({"status":true,"data":cats});
+        res.json(cats);
     });
 }
 
@@ -87,7 +103,7 @@ exports.listall = function(req, res){
     });
 }
 exports.del = function(req,res){
-    var catid = req.body.catid;
+    var catid = req.params.catid;
     console.log(catid);
     if(catid){
         deleteCategory(catid, function(data){
@@ -112,13 +128,8 @@ exports.add = function(req, res){
         }
     }
     */
-    console.log(property);
-    addCategory(name, {
-        upid: upid,
-        order: order,
-        type: type,
-        property: property
-    },function(data){
+    console.log(req.body);
+    addCategory(name, req.body,function(data){
         res.json(data);
     });
 };

@@ -56,13 +56,16 @@ app.get('/admin/productManage/:cpage/:perpage',product.list);
 app.get('/admin/productManage/listjson/:cpage/:perpage/:catid',product.listjson);
 app.get('/admin/productManage/new',auth,product.new);
 app.post('/admin/productManage/create',product.create);
-app.get('/admin/categoryManage',category.listpage);
-app.get('/admin/category/list',category.list);
-app.get('/admin/category/listall',category.listall);
+/**
+ * category restfull
+ */
+//app.get('/admin/categoryManage',category.listpage);
+app.get('/admin/category',category.list);
+app.get('/admin/category/:catid',category.get);
+app.post('/admin/category',category.add);
+app.put('/admin/category/:catid', category.update);
+app.delete('/admin/category/:catid',category.del);
 
-app.get('/admin/category/list/:catid',category.list);
-app.post('/admin/category/del',category.del);
-app.post('/admin/category/add',category.add);
 
 app.post('/upload',function(req,res){
     console.log(req.files);

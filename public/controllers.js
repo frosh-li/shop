@@ -4,32 +4,35 @@
 
 var phonecatControllers = angular.module('phonecatControllers', []);
 
-phonecatControllers.controller('CategoryCtroller', ['$scope', 'Category',
-  function($scope, Category) {
+phonecatControllers.controller('CategoryCtroller', ['$http','$scope', 'Category',
+  function($http,$scope, Category) {
     $scope.categories = Category.query();
     $scope.orderProp = 'upid';
 
     $scope.SaveOne = function(category){
-      category.$save();
-      //alert(category);
+      console.log(category);
+      category.$update({catid: category._id});
+    };
+    $scope.Delete = function(category){
+        var theOne = Category.query({catid: category._id});
+        theOne.$del({catid:category._id});
+        $scope.categories.data.forEach(function(item,index){
+          if(item._id == category._id){
+            $scope.categories.data.splice(index, 1);
+          }
+        });
     }
   }]);
 
-phonecatControllers.controller('CategoryEdit', ['$http','$scope','Category',
-  function($http, $scope, Category) {
-    $scope.category = {
-      type:"product",
-      order:0,
-      property:JSON.stringify({})
-    };
+phonecatControllers.controller('CategoryEdit', ['$scope','Category',
+  function($scope, Category) {
+    $scope.category = new Category();
+    $scope.category.type = "product";
+    $scope.category.order = "0";
+    $scope.category.property = JSON.stringify({});
     $scope.categories = Category.query();
-    console.log($scope.categories);
     $scope.create = function(category){
-        console.log(category);
-        $http.post("/admin/category/add",category).success(function(data, status, headers, config){
-            alert("success");
-        }).error(function(data, status, headers, config){
-            alert("error");
-        })
+      console.log(category);
+      category.$save();
     }
   }]);

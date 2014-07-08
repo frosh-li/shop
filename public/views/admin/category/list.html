@@ -33,14 +33,14 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr ng-repeat="category in categories.data">
+                      <tr ng-repeat="category in categories">
                         <td>{{category._id}}</td>
                         <td>{{category.upid}}</td>
                         <td><input type="text" value="{{category.categoryName}}" ng-model="category.categoryName" /></td>
                         <td>{{category.type}}</td>
                         <td>{{category.order}}</td>
                         <td>{{category.property}}</td>
-                        <td><span class="btn" ng-click="SaveOne(category._id)">保存</span></td>
+                        <td><span class="btn" ng-click="SaveOne(category)">保存</span><span class="btn" ng-click="Delete(category)">删除</span></td>
                       </tr>
                     </tbody>
                   </table>
