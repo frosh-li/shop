@@ -117,19 +117,30 @@ exports.del = function(req,res){
 exports.add = function(req, res){
     var name = req.body.name,
         upid = req.body.upid,
-        order = req.body.order,
-        type = req.body.type,
-        property = {};
-    /*
-    for(var key in req.body){
-        if(key.indexOf("property.") > -1){
-            console.log(req.body[key]);
-            property[key.split("property.")[1]] = req.body[key];
-        }
+        order = +req.body.order,
+        type = +req.body.type,
+        property = [];
+    if(!name){
+        res.json({"status":false});
+        return;
     }
-    */
     console.log(req.body);
-    addCategory(name, req.body,function(data){
+    var postdata = req.body;
+    //postdata.property = [];
+    req.body.property.forEach(function(item){
+        console.log(item);
+        if(item.name.trim() != "" && item.type.trim() != ""){
+            property.push({
+                name: item.name.trim(),
+                type: item.type.trim(),
+                values: item.values.trim()
+            });
+        }
+    });
+    postdata.property = property;
+    
+    
+    addCategory(name, postdata,function(data){
         res.json(data);
     });
 };

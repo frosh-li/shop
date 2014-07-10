@@ -48,10 +48,15 @@
                         <input type="text" ng-model="category.type" value="product" />
                       </div>
                     </div>
-                    <div class="control-group">
-                      <label class="control-label">附加属性</label>
+                    <div class="control-group" ng-repeat="property in category.property">
+                      <label class="control-label" ng-click="addProperty()">附加属性</label>
                       <div class="controls">
-                        <input type="text" ng-model="category.property" value="{}" />
+                        <input type="text" value="{{property.name}}" ng-model="property.name" placeHolder="属性名称(英文)" />
+                        <select ng-model="property.type">
+                          <option value="text" selected>文本输入</option>
+                          <option value="select">选择框</option>
+                        </select>
+                        <input type="text" ng-model="property.values" value="{{property.values}}" placeHolder="输入选项，用|分割" />
                       </div>
                     </div>
                     

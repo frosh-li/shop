@@ -10,7 +10,7 @@ phonecatServices.factory('Category', ['$resource',
       query: {method:'GET', params:{}, isArray:true},
       save: {method:'POST', isArray:false},
       update:{method:"PUT", isArray:false},
-      del:{method:"DELETE"}
+      del:{method:"DELETE", isArray:false}
     });
   }]);
 
